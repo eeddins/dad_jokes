@@ -29,4 +29,4 @@ Here is an example of the output:
 Contributions are welcome! If you find any bugs or have any suggestions, please open an issue or a pull request.
 
 ## License
-This program is licensed under the [MIT License](https://github.com/eeddins/dad_jokes/LICENSE).
+This program is licensed under the [MIT License](https://github.com/eeddins/dad_jokes?tab=MIT-1-ov-file#).
