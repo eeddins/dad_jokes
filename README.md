@@ -9,9 +9,9 @@ This is a Python program that uses a website as a source of inspiration to gener
 
 ## Installation
 1. Clone this repository:
-`git clone https://github.com/yourusername/daily-dad-jokes.git`
+`git clone https://github.com/eeddins/dad-jokes.git`
 2. Navigate to the project directory:
-`cd daily-dad-jokes`
+`cd dad-jokes`
 3. Install the required packages:
 `pip install -r requirements.txt`
 
@@ -19,7 +19,7 @@ This is a Python program that uses a website as a source of inspiration to gener
 To run the program, use the following command:
 
 `python daily_dad_jokes.py`
-The program will generate a new dad joke every day. You can customize the frequency of the jokes by modifying the SLEEP_TIME variable in the `daily_dad_jokes.py` file.
+The program will generate a new dad joke every day. You can customize the frequency of the jokes by modifying the SLEEP_TIME variable in the `src/daily_dad_jokes.py` file.
 
 Here is an example of the output:
 
