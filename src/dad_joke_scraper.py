@@ -1,10 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 import json
-from bs4 import BeautifulSoup
+import urllib3
 
-def extract_description(file_path):
-    # Parse the XML file
-    tree = ET.parse(file_path)
+# Disable the warning
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def extract_description(url):
+    # Send a GET request to the URL
+    response = requests.get(url, verify=False)
+
+    # Parse the XML response
+    tree = ET.ElementTree(ET.fromstring(response.content))
     root = tree.getroot()
 
     # Find all 'description' elements and extract their text
@@ -23,9 +31,8 @@ def extract_description(file_path):
     return json_descriptions
 
 # Use the function
-file_path = 'dadjokes.xml'  # Replace with your file path
-#print(extract_description(file_path))
-json_descriptions = extract_description(file_path)
+url = 'https://jokesoftheday.net/jokes-feed/'  # Replace with your URL
+json_descriptions = extract_description(url)
 
 # Save the output to a file
 with open('dadjokes.list', 'w') as f:
