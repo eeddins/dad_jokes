@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - 'src/daily_dad_jokes.py'
+    paths:
+      - 'src/daily_dad_jokes.py'
   schedule:
     - cron: '10 0 * * *' # Run every day at 10 minutes past midnight
 
