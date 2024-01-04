@@ -27,7 +27,6 @@ jobs:
         run: python3 src/daily_dad_jokes.py
 
       - name: Commit and push if it's not a pull request
-        if: github.event_name == 'push'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
