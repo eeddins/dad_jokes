@@ -13,13 +13,13 @@ This is a Python program that uses a website as a source of inspiration to gener
 2. Navigate to the project directory:
 `cd dad-jokes`
 3. Install the required packages:
-`pip install -r requirements.txt`
+`pip install -r src/requirements.txt`
 
 ## Usage
 To run the program, use the following command:
 
-`python daily_dad_jokes.py`
-The program will generate a new dad joke every day. You can customize the frequency of the jokes by modifying the SLEEP_TIME variable in the `src/daily_dad_jokes.py` file.
+`python src/daily_dad_jokes.py`
+The program will generate a new dad joke every day.
 
 Here is an example of the output:
 

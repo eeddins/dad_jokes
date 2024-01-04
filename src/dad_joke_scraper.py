@@ -31,10 +31,9 @@ def extract_description(url):
     return json_descriptions
 
 # Use the function
-url = 'https://jokesoftheday.net/jokes-feed/'  # Replace with your URL
+url = 'https://jokesoftheday.net/jokes-feed/'
 json_descriptions = extract_description(url)
 
 # Save the output to a file
 with open('dadjokes.list', 'w') as f:
     f.write(json_descriptions)
-# print(json_descriptions)
