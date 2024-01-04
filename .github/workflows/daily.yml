@@ -1,13 +1,13 @@
-name: Weekly Dad Joke Scraper
+name: Daily Dad Jokes
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/dad_joke_scraper.py'
+      - 'src/daily_dad_jokes.py'
   schedule:
-    - cron: '0 0 * * 0' # Run every Sunday at midnight
+    - cron: '10 0 * * *' # Run every day at 10 minutes past midnight
 
 jobs:
   build:
@@ -23,5 +23,5 @@ jobs:
           sudo apt-get install -y python3
           pip3 install -r src/requirements.txt
 
-      - name: Execute dad_joke_scraper.py
-        run: python3 src/dad_joke_scraper.py
+      - name: Execute src/daily_dad_jokes.py
+        run: python3 src/daily_dad_jokes.py

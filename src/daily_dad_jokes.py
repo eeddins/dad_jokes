@@ -14,3 +14,4 @@ random_joke = random.choice(jokes)
 # Save the joke to a file
 with open("jod.txt", "w") as f:
     f.write(random_joke)
+print(random_joke)
