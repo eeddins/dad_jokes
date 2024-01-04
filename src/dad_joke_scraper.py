@@ -1,3 +1,5 @@
+# Description: This script scrapes the dad jokes from the RSS feed and saves them to a file
+
 import requests
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
@@ -37,3 +39,4 @@ json_descriptions = extract_description(url)
 # Save the output to a file
 with open('dadjokes.list', 'w') as f:
     f.write(json_descriptions)
+
