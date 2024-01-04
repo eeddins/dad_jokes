@@ -1,0 +1,25 @@
+name: Weekly Dad Joke Scraper
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 0' # Run every Sunday at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3
+          pip3 install -r src/requirements.txt
+
+      - name: Execute dad_joke_scraper.py
+        run: python3 src/dad_joke_scraper.py

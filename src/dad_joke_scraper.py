@@ -37,3 +37,4 @@ json_descriptions = extract_description(url)
 # Save the output to a file
 with open('dadjokes.list', 'w') as f:
     f.write(json_descriptions)
+print(json_descriptions)
