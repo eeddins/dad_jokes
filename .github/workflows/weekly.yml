@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - 'src/dad_joke_scraper.py'
+    paths:
+      - 'src/dad_joke_scraper.py'
   schedule:
     - cron: '0 0 * * 0' # Run every Sunday at midnight
 
